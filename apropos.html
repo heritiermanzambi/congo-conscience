@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Congo Conscience</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+
+<!-- ================= HEADER ================= -->
+<header class="relative bg-blue-900">
+
+  <nav class="relative z-10 flex items-center justify-between px-4 md:px-10 py-4 text-white">
+    <h1 class="text-xl md:text-2xl font-bold">CONGO CONSCIENCE</h1>
+
+    <ul class="hidden md:flex gap-6 font-medium">
+      <li><a href="/congo/index.html" class="hover:text-red-400">ACCUEIL</a></li>
+      <li><a href="/congo/apropos.html" class="hover:text-red-400">APROPOS</a></li>
+      <li><a href="/congo/galerie.html" class="hover:text-red-400">GALERIE</a></li>
+      <li><a href="/congo/actualite.html" class="hover:text-red-400">ACTUALITE</a></li>
+      <li><a href="/congo/contact.html" class="hover:text-red-400">CONTACT</a></li>
+    </ul>
+
+    <a href="/congo/form.html"
+       class="hidden md:inline-block bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold transition">
+      Adhesion
+    </a>
+
+  <!-- Hamburger -->
+  <button id="menuBtn" class="md:hidden text-3xl">
+    ☰
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="fixed inset-0 bg-blue-900/95 text-white flex flex-col items-center justify-center space-y-6 text-lg hidden z-50">
+  <a href="/congo/index.html">ACCUEIL</a>
+  <a href="/congo/apropos.html">APROPOS</a>
+  <a href="/congo/galerie.html">GALERIE</a>
+  <a href="/congo/actualite.html">ACTUALITE</a>
+  <a href="/congo/contact.html">CONTACT</a>
+  <a href="/congo/form.html"
+     class="bg-red-600 px-6 py-2 rounded-lg">
+     Adhesion
+  </a>
+  <button id="closeMenu" class="text-sm underline mt-6">Fermer</button>
+</div>
+
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu"
+       class="hidden absolute top-0 left-0 w-full h-screen bg-blue-900 text-white flex flex-col items-center justify-center gap-6 text-lg z-20">
+    <a href="/congo/index.html">ACCUEIL</a>
+    <a href="#">APROPOS</a>
+    <a href="#">GALERIE</a>
+    <a href="#">ACTUALITE</a>
+    <a href="#">CONTACT</a>
+    <a href="/congo/form.html"
+       class="bg-red-600 px-6 py-2 rounded-lg mt-4">
+      Adhesion en ligne
+    </a>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="flex-grow">
+
+  <!-- QUI SOMMES-NOUS -->
+  <section class="w-full bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-14 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+          Qui sommes-nous ?
+        </h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        <!-- IMAGE -->
+        <div class="flex justify-center">
+          <img
+            src="./public/images/ccj.jpg"
+            alt="Logo Congo Conscience"
+            class="w-64 md:w-80 lg:w-96 object-contain drop-shadow-xl"
+          />
+        </div>
+
+        <!-- TEXTE -->
+        <div class="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
+          <p>
+            <strong class="text-gray-900">Congo Conscience</strong> est une organisation
+            politique citoyenne basée à Kinshasa, née de la volonté de participer
+            activement à la transformation durable de la République Démocratique du Congo.
+          </p>
+
+          <p>
+            Nous œuvrons pour un Congo fondé sur la justice, la paix, la responsabilité
+            collective et la valorisation du citoyen comme acteur principal du changement.
+          </p>
+
+          <p>
+            Créée en <strong>2XXX</strong> sous l’impulsion de
+            <strong>PRINCE MUKENDI</strong>, Congo Conscience s’inscrit dans une dynamique
+            de mobilisation, de sensibilisation et d’engagement patriotique.
+          </p>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-600">
+            <h4 class="font-semibold text-gray-900 mb-1">Siège social</h4>
+            <p>289, Quartier Industriel, Limete – Kinshasa</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- VISION -->
+  <section class="w-full bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-14 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+          Notre Vision
+        </h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- TEXTE -->
+        <div class="space-y-6 text-gray-800">
+          <p class="text-lg md:text-xl font-semibold uppercase text-blue-700">
+            Ensemble, bâtissons le Congo de demain
+          </p>
+
+          <ul class="space-y-4 text-base md:text-lg">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl">✔</span>
+              Placer l’humain au cœur des décisions publiques
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl">✔</span>
+              Promouvoir une conscience nationale responsable
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl">✔</span>
+              Encourager l’engagement citoyen et patriotique
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl">✔</span>
+              Construire un État fort, juste et solidaire
+            </li>
+          </ul>
+        </div>
+
+        <!-- VIDEO -->
+        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/883Md8DIgI4?mute=1&rel=0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-black text-white py-12 text-center">
+  <h2 class="text-2xl font-bold mb-4">CONGO CONSCIENCE</h2>
+  <p class="text-gray-400 text-sm">
+    © 2025 – Développeur Héritier Manzambi
+  </p>
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+
+
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+  closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+
+
+
+
+</script>
+
+</body>
+</html>

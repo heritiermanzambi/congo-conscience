@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page – Tailwind</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate.css (simple animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- HEADER / HERO -->
+  <header class="relative min-h-screen bg-cover bg-center" style="background-image: url('./public/images/pm2.jpg');">
+    <div class="absolute inset-0 bg-blue-900/70"></div>
+
+   <nav class="relative z-10 flex items-center justify-between px-4 md:px-10 py-4 text-white">
+  <h1 class="text-xl md:text-2xl font-bold">CONGO CONSCIENCE</h1>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex gap-6 font-medium">
+    <li><a href="/congo/index.html" class="hover:text-red-400">ACCUEIL</a></li>
+    <li><a href="/congo/apropos.html" class="hover:text-red-400">APROPOS</a></li>
+    <li><a href="/congo/galerie.html" class="hover:text-red-400">GALERIE</a></li>
+    <li><a href="#" class="hover:text-red-400">ACTUALITE</a></li>
+    <li><a href="#" class="hover:text-red-400">CONTACT</a></li>
+  </ul>
+
+  <!-- Button Desktop -->
+  <a href="/congo/form.html"
+     class="hidden md:inline-block bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold transition">
+     Adhesion
+  </a>
+
+  <!-- Hamburger -->
+  <button id="menuBtn" class="md:hidden text-3xl">
+    ☰
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="fixed inset-0 bg-blue-900/95 text-white flex flex-col items-center justify-center space-y-6 text-lg hidden z-50">
+  <a href="/congo/index.html">ACCUEIL</a>
+  <a href="/congo/apropos.html">APROPOS</a>
+  <a href="/congo/galerie.html">GALERIE</a>
+  <a href="#">ACTUALITE</a>
+  <a href="#">CONTACT</a>
+  <a href="/congo/form.html"
+     class="bg-red-600 px-6 py-2 rounded-lg">
+     Adhesion
+  </a>
+  <button id="closeMenu" class="text-sm underline mt-6">Fermer</button>
+</div>
+
+   <body class="min-h-screen flex items-center justify-center p-4 bg-[url('./public/images/pm2.jpg')] bg-cover bg-center bg-fixed">
+
+
+
+    
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <main class="relative z-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        
+        <div class="flex flex-col items-center justify-center space-y-6">
+            <h2 class="text-white text-2xl font-bold tracking-tight bg-black/20 px-4 py-1 rounded-full uppercase text-sm">Aperçu de votre carte</h2>
+            
+            <div id="member-card" class="w-[400px] h-[240px] card-gradient rounded-2xl shadow-2xl border border-white/20 p-6 relative overflow-hidden transition-all duration-300">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-blue-400 font-bold text-lg tracking-tighter">NOM DE VOTRE ASBL</h3>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Membre Officiel</p>
+                    </div>
+                    <div class="bg-white/10 p-2 rounded-lg border border-white/10">
+                        <span class="text-white text-xs font-mono">2025-2026</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex items-center space-x-5">
+                    <div class="w-24 h-24 rounded-xl border-2 border-blue-400 overflow-hidden bg-slate-700 flex items-center justify-center shadow-lg">
+                        <img id="card-photo" src="" alt="" class="w-full h-full object-cover hidden">
+                        <svg id="photo-placeholder" class="w-12 h-12 text-slate-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+
+                    <div class="flex-1">
+                        <p id="card-name" class="text-white text-xl font-bold uppercase truncate">VOTRE NOM</p>
+                        <p id="card-role" class="text-blue-300 text-sm italic">Poste / Fonction</p>
+                        <div class="mt-4 flex flex-col">
+                            <span class="text-gray-500 text-[9px] uppercase">ID Membre</span>
+                            <span class="text-white font-mono text-xs">ASBL-2025-XXXX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-2xl">
+            <div class="mb-8">
+                <h1 class="text-3xl font-extrabold text-slate-900">Rejoignez-nous</h1>
+                <p class="text-slate-500 mt-2">Remplissez vos informations pour générer votre carte.</p>
+            </div>
+
+            <form id="regForm" class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Nom Complet</label>
+                        <input type="text" id="inputName" placeholder="Jean Dupont" required
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Fonction</label>
+                        <input type="text" id="inputRole" placeholder="Bénévole, Adhérent..."
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
+                    <input type="email" placeholder="contact@exemple.com" required
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Photo de profil</label>
+                    <input type="file" id="inputPhoto" accept="image/*"
+                        class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                </div>
+
+                <button type="submit" 
+                    class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-200 transition-all transform active:scale-[0.98]">
+                    S'inscrire et Enregistrer
+                </button>
+            </form>
+        </div>
+    </main>
+
+ 
+
+
+
+  <footer class="bg-black text-white py-12 px-4 flex flex-col items-center font-sans">
+  
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold tracking-tight">CONGO CONSCIENCE<span class="text-xs align-top ml-0.5">®</span></h1>
+  </div>
+
+  <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 text-[13px] text-gray-300">
+    <a href="#" class="hover:underline">ACCEUIL</a>
+    <a href="#" class="hover:underline">APROPOS</a>
+    <a href="#" class="hover:underline">GALERIE</a>
+    <a href="#" class="hover:underline">CONTACT</a>
+    <a href="#" class="hover:underline">ACTUALITE</a>
+  </nav>
+
+  <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+    <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+      <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+    </a>
+    <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+      <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+      <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+      <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    </a>
+    <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+      <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+
+    
+  </div>
+
+  <p class="text-[12px] text-gray-400 font-medium">
+    <a href="">Developeur Heritier Manzambi</a>
+  </p>
+
+</footer>
+
+
+
+
+
+  <!-- SIMPLE JS ANIMATION ON SCROLL -->
+  <script>
+    const cards = document.querySelectorAll('section > div');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+
+
+  
+function toggleReadMore(button) {
+  const moreText = button.previousElementSibling.querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    button.innerText = "fermer";
+  } else {
+    moreText.classList.add("hidden");
+    button.innerText = "lire plus";
+  }
+}
+
+
+function toggleReadMore(btn) {
+  const moreText = btn
+    .previousElementSibling
+    .querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    btn.textContent = "Lire moins";
+  } else {
+    moreText.classList.add("hidden");
+    btn.textContent = "Lire plus";
+  }
+}
+
+
+
+function toggleReadMore(btn) {
+  const moreText = btn
+    .previousElementSibling
+    .querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    btn.textContent = "Lire moins";
+  } else {
+    moreText.classList.add("hidden");
+    btn.textContent = "Lire plus";
+  }
+}
+
+
+  // Logique de mise à jour en direct
+        const inputName = document.getElementById('inputName');
+        const inputRole = document.getElementById('inputRole');
+        const inputPhoto = document.getElementById('inputPhoto');
+
+        const cardName = document.getElementById('card-name');
+        const cardRole = document.getElementById('card-role');
+        const cardPhoto = document.getElementById('card-photo');
+        const photoPlaceholder = document.getElementById('photo-placeholder');
+
+        inputName.addEventListener('input', (e) => {
+            cardName.innerText = e.target.value || "VOTRE NOM";
+        });
+
+        inputRole.addEventListener('input', (e) => {
+            cardRole.innerText = e.target.value || "Poste / Fonction";
+        });
+
+        inputPhoto.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    cardPhoto.src = e.target.result;
+                    cardPhoto.classList.remove('hidden');
+                    photoPlaceholder.classList.add('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+
+
+    
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+  closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>congo-consc/title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate.css (simple animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- HEADER / HERO -->
+    <header class="relative min-h-screen bg-cover bg-center" style="background-image: url('');">
+    <div class="absolute inset-0 bg-blue-900/70"></div>
+
+   <nav class="relative z-10 flex items-center justify-between px-4 md:px-10 py-4 text-white">
+  <h1 class="text-xl md:text-2xl font-bold">CONGO CONSCIENCE</h1>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex gap-6 font-medium">
+    <li><a href="/congo/index.html" class="hover:text-red-400">ACCUEIL</a></li>
+    <li><a href="/congo/apropos.html" class="hover:text-red-400">APROPOS</a></li>
+    <li><a href="/congo/galerie.html" class="hover:text-red-400">GALERIE</a></li>
+    <li><a href="#" class="hover:text-red-400">ACTUALITE</a></li>
+    <li><a href="#" class="hover:text-red-400">CONTACT</a></li>
+  </ul>
+
+  <!-- Button Desktop -->
+  <a href="/congo/form.html"
+     class="hidden md:inline-block bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold transition">
+     Adhesion
+  </a>
+
+  <!-- Hamburger -->
+  <button id="menuBtn" class="md:hidden text-3xl">
+  
+  
+    ☰
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="fixed inset-0 bg-blue-900/95 text-white flex flex-col items-center justify-center space-y-6 text-lg hidden z-50">
+  <a href="/congo/index.html">ACCUEIL</a>
+  <a href="/congo/apropos.html">APROPOS</a>
+  <a href="/congo/galerie.html">GALERIE</a>
+  <a href="/congo/actualite.html">ACTUALITE</a>
+  <a href="/congo/contact.html">CONTACT</a>
+  <a href="/congo/form.html"
+     class="bg-red-600 px-6 py-2 rounded-lg">
+     Adhesion
+  </a>
+  <button id="closeMenu" class="text-sm underline mt-6">Fermer</button>
+</div>
+
+
+ 
+ 
+ <!-- ================= HERO ================= -->
+<section class="bg-gray-900 text-white py-24">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Galerie</h2>
+    <p class="text-gray-300 text-lg">
+      Revivez en images nos actions, événements et engagements citoyens.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FILTRES (OPTIONNEL) ================= -->
+<section class="py-10 bg-white">
+  <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-4">
+    <button class="px-5 py-2 rounded-full bg-blue-600 text-white text-sm">Tout</button>
+    <button class="px-5 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-sm">Événements</button>
+    <button class="px-5 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-sm">Meetings</button>
+    <button class="px-5 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-sm">Actions sociales</button>
+  </div>
+</section>
+
+<!-- ================= GALERIE ================= -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- IMAGE CARD -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+        <img src="./public/images/pm6.jpg"
+             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <p class="text-white text-sm font-semibold">Meeting populaire</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+        <img src="./public/images/pm2.jpg"
+             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <p class="text-white text-sm font-semibold">Mobilisation citoyenne</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+        <img src="./public/images/pm3.jpg"
+             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <p class="text-white text-sm font-semibold">Engagement social</p>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+        <img src="./public/images/pm4.jpg"
+             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          <p class="text-white text-sm font-semibold">Rencontre officielle</p>
+        </div>
+      </div>
+
+      <!-- DUPLIQUE CES BLOCS POUR PLUS D’IMAGES -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="bg-blue-900 text-white py-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h3 class="text-3xl font-bold mb-4">Rejoignez l'ASBL</h3>
+    <p class="text-gray-200 mb-8">
+      Ensemble, construisons un Congo conscient, fort et uni.
+    </p>
+    <a href="/congo/form.html"
+       class="inline-block bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg font-semibold transition">
+      Adhérer maintenant
+    </a>
+  </div>
+</section>
+
+
+
+
+
+  <!-- SIMPLE JS ANIMATION ON SCROLL -->
+  <script>
+    const cards = document.querySelectorAll('section > div');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+
+
+  
+function toggleReadMore(button) {
+  const moreText = button.previousElementSibling.querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    button.innerText = "fermer";
+  } else {
+    moreText.classList.add("hidden");
+    button.innerText = "lire plus";
+  }
+}
+
+
+function toggleReadMore(btn) {
+  const moreText = btn
+    .previousElementSibling
+    .querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    btn.textContent = "Lire moins";
+  } else {
+    moreText.classList.add("hidden");
+    btn.textContent = "Lire plus";
+  }
+}
+
+
+
+function toggleReadMore(btn) {
+  const moreText = btn
+    .previousElementSibling
+    .querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    btn.textContent = "Lire moins";
+  } else {
+    moreText.classList.add("hidden");
+    btn.textContent = "Lire plus";
+  }
+}
+
+
+
+
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+  closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>

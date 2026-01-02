@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>congo-consc</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate.css (simple animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- HEADER / HERO -->
+    <header class="relative min-h-screen bg-cover bg-center" ">
+    <div class="absolute inset-0 bg-blue-900/70"></div>
+
+   <nav class="relative z-10 flex items-center justify-between px-4 md:px-10 py-4 text-white">
+  <h1 class="text-xl md:text-2xl font-bold">CONGO CONSCIENCE</h1>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex gap-6 font-medium">
+    <li><a href="/congo/index.html" class="hover:text-red-400">ACCUEIL</a></li>
+    <li><a href="/congo/apropos.html" class="hover:text-red-400">APROPOS</a></li>
+    <li><a href="/congo/galerie.html" class="hover:text-red-400">GALERIE</a></li>
+    <li><a href="/congo/actualite.html" class="hover:text-red-400">ACTUALITE</a></li>
+    <li><a href="/congo/contact.html" class="hover:text-red-400">CONTACT</a></li>
+  </ul>
+
+  <!-- Button Desktop -->
+  <a href="/congo/form.html"
+     class="hidden md:inline-block bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold transition">
+     Adhesion
+  </a>
+
+  <!-- Hamburger -->
+  <button id="menuBtn" class="md:hidden text-3xl">
+    ☰
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="fixed inset-0 bg-blue-900/95 text-white flex flex-col items-center justify-center space-y-6 text-lg hidden z-50">
+  <a href="/congo/index.html">ACCUEIL</a>
+  <a href="/congo/apropos.html">APROPOS</a>
+  <a href="/congo/galerie.html">GALERIE</a>
+  <a href="/congo/actualite.html">ACTUALITE</a>
+  <a href="/congo/contact.html">CONTACT</a>
+  <a href="/congo/form.html"
+     class="bg-red-600 px-6 py-2 rounded-lg">
+     Adhesion
+  </a>
+  <button id="closeMenu" class="text-sm underline mt-6">Fermer</button>
+</div>
+
+
+ 
+ 
+<section class="bg-gray-900 text-white py-24">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Actualités</h2>
+    <p class="text-gray-300 text-lg">
+      Suivez nos dernières actions, communiqués et événements officiels.
+    </p>
+  </div>
+</section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="py-16">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-12">
+
+    <!-- ================= ARTICLES ================= -->
+    <section class="lg:col-span-3 space-y-10">
+
+      <!-- ARTICLE CARD -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="./public/images/pm3.jpg" alt="Actualité"
+             class="w-full h-64 object-cover">
+
+        <div class="p-6">
+          <span class="text-xs uppercase text-blue-600 font-semibold">
+            Communiqué officiel
+          </span>
+
+          <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">
+            Marche citoyenne pour la paix et l’unité nationale
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Congo Conscience a pris part à la mobilisation nationale
+            en soutien aux actions pour le retour de la paix durable
+            sur l’ensemble du territoire congolais...
+          </p>
+
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">
+              19 décembre 2025
+            </span>
+
+            <a href="#"
+               class="text-blue-700 font-semibold hover:underline">
+              Lire l’article →
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTICLE CARD -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="./public/images/pm5.jpg" alt="Actualité"
+             class="w-full h-64 object-cover">
+
+        <div class="p-6">
+          <span class="text-xs uppercase text-red-600 font-semibold">
+            Distinction
+          </span>
+
+          <h3 class="text-2xl font-bold text-gray-800 mt-2 mb-3">
+            Prince Mukendi honoré par le prix Bravo X
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Le président de Congo Conscience a été récompensé
+            pour son leadership et son engagement au service
+            de la nation congolaise...
+          </p>
+
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">
+              21 décembre 2025
+            </span>
+
+            <a href="#"
+               class="text-blue-700 font-semibold hover:underline">
+              Lire l’article →
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PAGINATION -->
+      <div class="flex justify-center gap-2 pt-10">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm">1</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-lg text-sm">2</button>
+        <button class="px-4 py-2 bg-gray-200 rounded-lg text-sm">3</button>
+      </div>
+
+    </section>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="space-y-8">
+
+      <!-- SEARCH -->
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-semibold mb-4">Recherche</h4>
+        <input type="text"
+               placeholder="Rechercher..."
+               class="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-semibold mb-4">Catégories</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:underline">Communiqués</a></li>
+          <li><a href="#" class="hover:underline">Événements</a></li>
+          <li><a href="#" class="hover:underline">Distinctions</a></li>
+          <li><a href="#" class="hover:underline">Actions sociales</a></li>
+        </ul>
+      </div>
+
+      <!-- RECENT -->
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h4 class="font-semibold mb-4">Articles récents</h4>
+
+        <ul class="space-y-4 text-sm">
+          <li>
+            <a href="#" class="font-medium hover:underline">
+              Mobilisation nationale pour la paix
+            </a>
+            <p class="text-gray-500 text-xs">19 déc. 2025</p>
+          </li>
+
+          <li>
+            <a href="#" class="font-medium hover:underline">
+              Prix Bravo X décerné à Prince Mukendi
+            </a>
+            <p class="text-gray-500 text-xs">21 déc. 2025</p>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+</main>
+
+<!-- ================= CTA ================= -->
+<section class="bg-blue-900 text-white py-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h3 class="text-3xl font-bold mb-4">Restez informé</h3>
+    <p class="text-gray-200 mb-8">
+      Abonnez-vous pour recevoir nos dernières actualités.
+    </p>
+
+    <form class="flex flex-col sm:flex-row justify-center gap-4">
+      <input type="email"
+             placeholder="Votre email"
+             class="px-5 py-3 rounded-lg text-gray-900 w-full sm:w-auto">
+      <button class="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-lg font-semibold">
+        S’abonner
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+  <!-- SIMPLE JS ANIMATION ON SCROLL -->
+  <script>
+    const cards = document.querySelectorAll('section > div');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+
+
+  
+function toggleReadMore(button) {
+  const moreText = button.previousElementSibling.querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    button.innerText = "fermer";
+  } else {
+    moreText.classList.add("hidden");
+    button.innerText = "lire plus";
+  }
+}
+
+
+function toggleReadMore(btn) {
+  const moreText = btn
+    .previousElementSibling
+    .querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    btn.textContent = "Lire moins";
+  } else {
+    moreText.classList.add("hidden");
+    btn.textContent = "Lire plus";
+  }
+}
+
+
+
+function toggleReadMore(btn) {
+  const moreText = btn
+    .previousElementSibling
+    .querySelector(".more");
+
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    btn.textContent = "Lire moins";
+  } else {
+    moreText.classList.add("hidden");
+    btn.textContent = "Lire plus";
+  }
+}
+
+
+
+
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+  closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>
