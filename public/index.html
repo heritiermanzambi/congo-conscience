@@ -66,13 +66,15 @@
 
         <!-- FORM -->
           <form
+
+           id="contactForm"
   action="https://formsubmit.co/hrtrmanzambi@gmail.com"
   method="POST"
   class="flex flex-col sm:flex-col gap-3 max-w-xl"
 >
   <!-- Sécurité -->
-  <input type="hidden" name="_next" value="https://ton-site.vercel.app/index.html">
-  <input type="hidden" name="_next" value="https://ton-site.vercel.app/index.html">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_captcha" value="table">
 
 
   <input
@@ -98,6 +100,11 @@
     Envoyer
   </button>
 </form>
+
+<p id="successMsg" class="hidden text-green-600 mt-4">
+  ✅ Message envoyé avec succès !
+</p>
+
 
       </div>
 
@@ -455,6 +462,28 @@ function toggleReadMore(btn) {
 
   menuBtn.onclick = () => mobileMenu.classList.remove("hidden");
   closeMenu.onclick = () => mobileMenu.classList.add("hidden");
+
+
+
+
+  
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("successMsg");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // ⛔ bloque FormSubmit page
+
+    const data = new FormData(form);
+
+    await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    form.reset();
+    successMsg.classList.remove("hidden");
+  });
 
 
 
